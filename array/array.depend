@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1511275304 source:/home/liux/c_workspace/array/main.c
+	<stdio.h>
+	<stdlib.h>
+	"out_of_bound.h"
+	<string.h>
+
+1511268181 source:/home/liux/c_workspace/array/out_of_bound1.c
+	<stdio.h>
+
+1511268862 source:/home/liux/c_workspace/array/out_of_bound2.c
+	<stdio.h>
+
+1511268954 source:/home/liux/c_workspace/array/out_of_bound3.c
+	<stdio.h>
+
+1511269348 source:/home/liux/c_workspace/array/out_of_bound4.c
+	<stdio.h>
+
+1511269608 /home/liux/c_workspace/array/out_of_bound.h
+
+1511269490 source:/home/liux/c_workspace/array/out_of_bound5.c
+	<stdio.h>
+

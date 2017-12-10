@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1511252413 source:/home/liux/c_workspace/DeepRecursive/main.c
+	<stdio.h>
+	<stdlib.h>
+	"hello.h"
+	"recursive.h"
+
+1511246519 source:/home/liux/c_workspace/DeepRecursive/hello.c
+	<stdio.h>
+
+1511247124 source:/home/liux/c_workspace/DeepRecursive/recursive.c
+
+1511246980 /home/liux/c_workspace/DeepRecursive/hello.h
+
+1511247003 /home/liux/c_workspace/DeepRecursive/recursive.h
+

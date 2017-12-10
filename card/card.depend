@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511870019 source:/home/liux/c_workspace/card/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1511355064 source:/home/liux/c_workspace/pointer/main.c
+	<stdio.h>
+	"pointer.h"
+
+1511339588 source:/home/liux/c_workspace/pointer/point_func.c
+	<stdio.h>
+
+1511352201 /home/liux/c_workspace/pointer/pointer.h
+
+1511340741 source:/home/liux/c_workspace/pointer/pointer_array_and_string.c
+	<stdio.h>
+
+1511340834 source:/home/liux/c_workspace/pointer/pointer_func.c
+	<stdio.h>
+
+1511343244 source:/home/liux/c_workspace/pointer/integral.c
+	<stdio.h>
+
+1511352186 source:/home/liux/c_workspace/pointer/ysfh.c
+	<stdio.h>
+

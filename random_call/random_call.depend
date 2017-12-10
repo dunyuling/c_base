@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1512011591 source:/home/liux/c_workspace/random_call/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+

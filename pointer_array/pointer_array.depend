@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1511525241 source:/home/liux/c_workspace/pointer_array/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

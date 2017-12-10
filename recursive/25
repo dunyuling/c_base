@@ -1,0 +1,11 @@
+Input the number of disk
+start time is: Sun Dec 10 17:12:37 2017
+steps of moving 3 disks from A to B by means of C
+1 move from A to B	1
+2 move from A to C	2
+1 move from B to C	3
+3 move from A to B	4
+1 move from C to A	5
+2 move from C to B	6
+1 move from A to B	7
+end time is: Sun Dec 10 17:12:37 2017

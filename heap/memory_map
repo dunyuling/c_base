@@ -1,0 +1,68 @@
+						varGlobalCons1 = 4009f8
+全局常量地址				varGlobalCons2 = 4009fc
+						varGlobalCons3 = 400a00
+
+
+						varGlobal4 = 602058
+全局变量地址（初始化）      varGlobal5 = 60205c
+						varGlobal6 = 602060
+
+
+						varGlobalStat1 = 602064
+全局静态变量地址			varGlobalStat2 = 602068
+						varGlobalStat3 = 60206c
+
+
+ 						varLocalStat1 = 602074
+本地静态变量地址(已初始化)	varLocalStat2 = 602078
+						varLocalStat3 = 60207c
+
+						varLocalStat4 = 602080
+本地静态变量地址(未初始化)	varLocalStat5 = 602084
+						varLocalStat6 = 602088
+
+
+						varGlobal1 = 602094
+全局变量地址（未初始化）     varGlobal2 = 60208c
+					    varGlobal3 = 602090	
+
+					    pMalloc1 = 1cf8010
+在堆上分配的内存地址	    pMalloc2 = 1cf8030
+					    pMalloc3 = 1cf8050	
+
+
+					    param1 = 7adc3fcc
+函数参数地址			    param2 = 7adc3fc8
+					    param3 = 7adc3fc4
+
+
+					    varLocal1 = 7adc3fd0
+函数内变量地址			    varLocal2 = 7adc3fd4
+					    varLocal3 = 7adc3fd8
+
+						varLocalCons1 = 7adc3fdc
+函数内常量地址				varLocalCons2 = 7adc3fe0
+						varLocalCons3 = 7adc3fe4
+
+
+						varLocalCons1 = 7adc4008
+main()本地常量地址			varLocalCons2 = 7adc400c
+						varLocalCons3 = 7adc4010
+
+						varLocal1 = 7adc4014
+main()本地变量地址			varLocal2 = 7adc4018
+						varLocal3 = 7adc401c
+
+
+
+
+
+
+						
+
+
+
+						
+
+
+

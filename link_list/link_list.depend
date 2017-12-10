@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1512196809 source:/home/liux/c_workspace/link_list/main.c
+	<stdio.h>
+	<stdlib.h>
+

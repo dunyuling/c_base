@@ -1,0 +1,106 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX 100
+#define CMAX 4
+#define NAME_LEN 20
+#define ID_LEN 10
+
+int input_info(char *stu_name,char *stu_id,int stu_num)
+{
+    printf("begin input student info \n");
+    int i;
+    for(i=0; i<stu_num; i++)
+    {
+        scanf(" %s",stu_id + i*ID_LEN);
+        scanf(" %s",stu_name + i*NAME_LEN);
+    }
+    return stu_num;
+}
+
+void random_call(char *stu_name,char *stu_id,int stu_absent_num[],int stu_num )
+{
+    int i,call_num;
+    char answer;
+
+    srand(time(NULL));
+    call_num = rand()%CMAX;
+    int *call_index = malloc(NAME_LEN*sizeof(int));
+    if(call_index == NULL)
+    {
+        printf("No enough memory\n");
+        exit(0);
+    }
+    else
+    {
+        printf("=======\n");
+        for(i=0; i<call_num; i++)
+        {
+            call_index[i] = rand()%stu_num;
+            printf("Is student %s,  %s present?\n",stu_id + call_index[i] * ID_LEN, stu_name + call_index[i] * NAME_LEN);
+            scanf(" %c",&answer);
+            if(answer == 'N')
+            {
+                stu_absent_num[call_index[i]]++;
+            }
+        }
+    }
+    free(call_index);
+}
+
+void sum_score(int stu_score[], int stu_absent_num[],int stu_num)
+{
+    int i;
+    for(i=0; i<stu_num; i++)
+    {
+        switch(stu_absent_num[i])
+        {
+        case 0:
+            stu_score[i] = 5;
+            break;
+        case 1:
+            stu_score[i] = 4;
+            break;
+        case 2:
+            stu_score[i] = 2;
+            break;
+        default:
+            stu_score[i] = 0;
+            break;
+        }
+    }
+
+}
+
+void output_info(char *stu_name,char *stu_id,int score_num[],int stu_num)
+{
+    int i;
+    for(i=0; i<stu_num; i++)
+    {
+        printf("%s, %s, %d\n",stu_name + i * NAME_LEN,stu_id + i * ID_LEN,score_num[i]);
+    }
+}
+
+int main()
+{
+
+    int stu_score[MAX],stu_absent_num[MAX] = {0};
+    int stu_num,hours, i;
+    printf("Please input the number student.\n");
+    scanf(" %d",&stu_num);
+    //下面两句二维数组实际上作为一维数组来看待
+    char *stu_name = (char *)malloc(stu_num * NAME_LEN * sizeof(char));
+    char *stu_id = (char *)malloc(stu_num * ID_LEN * sizeof(char));
+    input_info(stu_name,stu_id,stu_num);
+    printf("Please input the number of lessons.\n");
+    scanf("%d",&hours);
+    for(i=0; i<hours; i++)
+    {
+        random_call(stu_name,stu_id,stu_absent_num, stu_num);
+    }
+    sum_score(stu_score, stu_absent_num,stu_num);
+    output_info(stu_name,stu_id,stu_score,stu_num);
+    free(stu_name);
+    free(stu_id);
+    return 0;
+}

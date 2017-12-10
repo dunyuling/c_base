@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1512026062 source:/home/liux/c_workspace/pointer_strong/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+

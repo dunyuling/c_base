@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1511320318 source:/home/liux/c_workspace/sort/main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"sort.h"
+
+1511318208 source:/home/liux/c_workspace/sort/Bubble.c
+	<stdio.h>
+	<stdlib.h>
+
+1511318175 /home/liux/c_workspace/sort/sort.h
+

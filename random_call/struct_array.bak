@@ -1,0 +1,112 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define MAX 100
+#define CMAX 4
+#define NAME_LEN 20
+#define ID_LEN 10
+
+typedef struct student
+{
+    char name[NAME_LEN];
+    char id[ID_LEN];
+    int score;
+    int absent;
+} STUDENT;
+
+int input_info(STUDENT stus[],int stu_num)
+{
+    printf("begin input student info \n");
+    int i;
+    for(i=0; i<stu_num; i++)
+    {
+        scanf(" %s", stus[i].id);
+        scanf(" %s", stus[i].name);
+        stus[i].score = 5;
+        stus[i].absent = 0;
+    }
+    return stu_num;
+}
+
+void random_call(STUDENT stus[],int stu_num)
+{
+    int i,call_num;
+    char answer;
+
+    srand(time(NULL));
+    call_num = rand()%CMAX;
+    int *call_index = malloc(NAME_LEN*sizeof(int));
+    if(call_index == NULL)
+    {
+        printf("No enough memory\n");
+        exit(0);
+    }
+    else
+    {
+        printf("=======\n");
+        for(i=0; i<call_num; i++)
+        {
+            call_index[i] = rand()%stu_num;
+            printf("Is student %s,  %s present?\n",stus[i].id, stus[i].name);
+            scanf(" %c",&answer);
+            if(answer == 'N')
+            {
+                stus[i].absent++;
+            }
+        }
+    }
+    free(call_index);
+}
+
+void sum_score(STUDENT stus[],int stu_num)
+{
+    int i;
+    for(i=0; i<stu_num; i++)
+    {
+        switch(stus[i].absent)
+        {
+        case 0:
+            stus[i].score = 5;
+            break;
+        case 1:
+            stus[i].score = 4;
+            break;
+        case 2:
+            stus[i].score = 2;
+            break;
+        default:
+            stus[i].score = 0;
+            break;
+        }
+    }
+
+}
+
+void output_info(STUDENT stus[],int stu_num)
+{
+    int i;
+    for(i=0; i<stu_num; i++)
+    {
+        printf("%s, %s, %d\n",stus[i].id,stus[i].name,stus[i].score);
+    }
+}
+
+int main()
+{
+    int stu_num,hours, i;
+    printf("Please input the number student.\n");
+    scanf(" %d",&stu_num);
+    STUDENT stus[stu_num];
+
+    input_info(stus,stu_num);
+    printf("Please input the number of lessons.\n");
+    scanf("%d",&hours);
+    for(i=0; i<hours; i++)
+    {
+        random_call(stus, stu_num);
+    }
+    sum_score(stus,stu_num);
+    output_info(stus,stu_num);
+    return 0;
+}
